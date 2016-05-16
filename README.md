@@ -38,9 +38,9 @@ Items distributed in row and centered within container:
 </div>
 ```
 
-## Learn more:
-* [Documentation](http://progressivered.com/fla/#documentation)
-* [Snippets](http://progressivered.com/fla/#snippets)
+## Learn more
+Interactive demo, documentation and snippets on project page: http://progressivered/fla/ 
+
 
 * * *
 #### License
