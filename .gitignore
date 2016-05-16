@@ -1,3 +1,6 @@
 /*/
 !/css/
 !/sass/
+!*.js
+!*.json
+!*.md
