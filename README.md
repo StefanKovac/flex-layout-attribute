@@ -14,4 +14,6 @@ Layout helper based on CSS flexbox specification designed to serve you as quick 
 
 #### Documentation
 
-#### License
+##### License
+
+Code released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
