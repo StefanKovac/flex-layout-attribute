@@ -39,9 +39,9 @@ Items distributed in row and centered within container:
 ```
 
 ## Learn more
-Interactive demo, documentation and snippets on project page: http://progressivered.com/fla/ 
+View interactive demo, documentation and snippets on project page: http://progressivered.com/fla/ 
 
 
 * * *
-#### License
+##### License
 FLA is released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
