@@ -35,7 +35,6 @@ gulp.task( 'compile-css', function() {
             .pipe( sass() )
             .pipe( prefix( {
                     browsers : ['last 2 version']
-                    //,cascade : false
             } ) )
             .pipe(header( banner, { pkg : pkg } ) )
             .pipe( size( {pretty : true, showFiles : true} ) )
