@@ -8,6 +8,10 @@ Layout helper based on CSS flexbox specification designed to serve you as quick 
 </div>
 ```
 
-### View demo
-
+#### Interactive demo
 [![View demo](http://progressivered.com/assets/img/fla.jpg)](http://progressivered.com/fla/)
+
+
+#### Documentation
+
+#### License
