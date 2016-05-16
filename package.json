@@ -12,7 +12,7 @@
         "homepage" : "http://progressivered.com/fla/",
         "repository" : {
                 "type" : "git",
-                "url" : "https://github.com/"
+                "url" : "https://github.com/StefanKovac/flex-layout-attribute.git"
         },
         "keywords" : [
                 "flexbox",
