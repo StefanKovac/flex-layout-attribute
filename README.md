@@ -1,4 +1,4 @@
-# [Flex Layout Attribute](http://progressivered.com/fla/)
+# [Flex Layout Attribute (FLA)](http://progressivered.com/fla/)
 
 Layout helper based on CSS flexbox specification designed to serve you as **quick flexbox shorthand** by using two custom html attributes — **layout** and **self**.
 #### Basic example
@@ -42,5 +42,6 @@ Items distributed in row and centered within container:
 * [Documentation](http://progressivered.com/fla/#documentation)
 * [Snippets](http://progressivered.com/fla/#snippets)
 
+* * *
 #### License
-Released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
+FLA is released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
