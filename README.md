@@ -20,10 +20,6 @@ Items distributed in row and centered within container:
 - **Rapid prototyping** — design in browser, quick iterations, no need to write CSS for layout.
 - **Solid base** — ease to extend and customize.
 
-
-* * *
-
-
 #### Quick start
 1) [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/archive/v1.0.0.zip)
 
