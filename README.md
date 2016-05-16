@@ -1,6 +1,6 @@
 # [Flex Layout Attribute](http://progressivered.com/fla/)
 
-Layout helper based on CSS flexbox specification designed to serve you as quick flexbox shorthand by using two custom html attributes — **layout** and **self**.
+Layout helper based on CSS flexbox specification designed to serve you as **quick flexbox shorthand** by using two custom html attributes — **layout** and **self**.
 #### Basic example
 Items distributed in row and centered within container:
 ``` html
