@@ -1,12 +1,13 @@
-/**
+/*!
  * Flex layout attribute
  * HTML layout helper based on CSS flexbox specification. See http://progressivered.com/fla/ for details.
  * 
- * VERSION: v0.1.0
  * DATE:    2016-05-16
  * URL:     http://progressivered.com/fla/
  * AUTHOR:  Stefan Kovac | stef@progressivered.com | http://progressivered.com/
  * LICENSE: MIT
+ */
+
 @charset "UTF-8";
 /*
 ==========================================================
@@ -14,7 +15,6 @@
 ==========================================================
 */
 [layout] {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
@@ -24,35 +24,29 @@
   max-width: 100%; }
 
 [layout~="row"] {
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+  -ms-flex-direction: row;
+      flex-direction: row; }
 
 [layout~="column"] {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  -ms-flex-direction: column;
+      flex-direction: column; }
 
 [layout*="row"][layout*="reverse"] {
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse; }
 
 [layout*="column"][layout*="reverse"] {
-  -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
 
 [layout*="rows"],
 [layout*="columns"] {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 [layout="none"] {
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none; }
+  -ms-flex: none;
+      flex: none; }
 
 /*
 ==========================================================
@@ -61,34 +55,29 @@
 */
 [layout*="column"][layout*="top-"],
 [layout*="row"][layout*="-left"] {
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
 
 [layout~="centered"],
 [layout*="column"][layout*="center-"],
 [layout*="row"][layout*="-center"] {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 [layout*="column"][layout*="bottom-"],
 [layout*="row"][layout*="-right"] {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
 
 [layout*="column"][layout*="spread-"],
 [layout*="row"][layout*="-spread"] {
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 [layout*="column"][layout*="justify-"],
 [layout*="row"][layout*="-justify"] {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 /*
 ==========================================================
@@ -97,32 +86,28 @@
 */
 [layout*="column"][layout*="-left"],
 [layout*="row"][layout*="top-"] {
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
-          align-items: flex-start; }
+  -ms-flex-align: start;
+      -ms-grid-row-align: flex-start;
+      align-items: flex-start; }
 
 [layout~="centered"],
 [layout*="column"][layout*="-center"],
 [layout*="row"][layout*="center-"] {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-              -ms-grid-row-align: center;
-          align-items: center; }
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center; }
 
 [layout*="column"][layout*="-right"],
 [layout*="row"][layout*="bottom-"] {
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
-          align-items: flex-end; }
+  -ms-flex-align: end;
+      -ms-grid-row-align: flex-end;
+      align-items: flex-end; }
 
 [layout*="column"][layout*="-stretch"],
 [layout*="row"][layout*="stretch-"] {
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-              -ms-grid-row-align: stretch;
-          align-items: stretch; }
+  -ms-flex-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-items: stretch; }
 
 /*
 ==========================================================
@@ -131,39 +116,33 @@
 */
 [layout*="rows"][layout*="top-"],
 [layout*="columns"][layout*="-left"] {
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start; }
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
 
 [layout*="rows"][layout*="bottom-"],
 [layout*="columns"][layout*="-right"] {
-  -webkit-align-content: flex-end;
-      -ms-flex-line-pack: end;
-          align-content: flex-end; }
+  -ms-flex-line-pack: end;
+      align-content: flex-end; }
 
 [layout*="rows"][layout*="center-"],
 [layout*="columns"][layout*="-center"] {
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; }
+  -ms-flex-line-pack: center;
+      align-content: center; }
 
 [layout*="rows"][layout*="justify-"],
 [layout*="columns"][layout*="-justify"] {
-  -webkit-align-content: space-between;
-      -ms-flex-line-pack: justify;
-          align-content: space-between; }
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
 
 [layout*="rows"][layout*="spread-"],
 [layout*="columns"][layout*="-spread"] {
-  -webkit-align-content: space-around;
-      -ms-flex-line-pack: distribute;
-          align-content: space-around; }
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
 
 [layout*="rows"][layout*="stretch-"],
 [layout*="columns"][layout*="-stretch"] {
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch; }
+  -ms-flex-line-pack: stretch;
+      align-content: stretch; }
 
 /*
 ==========================================================
@@ -185,25 +164,21 @@
 */
 [layout*="column"]:not([layout*="row"]) [self*="left"],
 [layout*="row"]:not([layout*="column"]) [self*="top"] {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start; }
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
 
 [self~="center"] {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; }
+  -ms-flex-item-align: center;
+      align-self: center; }
 
 [layout*="column"]:not([layout*="row"]) [self*="right"],
 [layout*="row"]:not([layout*="column"]) [self*="bottom"] {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
 
 [self*="stretch"] {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch; }
+  -ms-flex-item-align: stretch;
+      align-self: stretch; }
 
 /* ALIGN VIA MARGINS
 ========================================================== */
@@ -271,59 +246,48 @@
 [layout*="row"][layout*="-stretch"] > *:not([self*="size-"]),
 [layout*="column"][layout*="stretch-"] > *:not([self*="size-"]),
 [self~="size-x1"] {
-  -webkit-flex: 1 0 0 !important;
-      -ms-flex: 1 0 0 !important;
-          flex: 1 0 0 !important; }
+  -ms-flex: 1 0 0 !important;
+      flex: 1 0 0 !important; }
 
 [self~="size-x2"] {
-  -webkit-flex: 2 0 0 !important;
-      -ms-flex: 2 0 0 !important;
-          flex: 2 0 0 !important; }
+  -ms-flex: 2 0 0 !important;
+      flex: 2 0 0 !important; }
 
 [self~="size-x3"] {
-  -webkit-flex: 3 0 0 !important;
-      -ms-flex: 3 0 0 !important;
-          flex: 3 0 0 !important; }
+  -ms-flex: 3 0 0 !important;
+      flex: 3 0 0 !important; }
 
 [self~="size-x4"] {
-  -webkit-flex: 4 0 0 !important;
-      -ms-flex: 4 0 0 !important;
-          flex: 4 0 0 !important; }
+  -ms-flex: 4 0 0 !important;
+      flex: 4 0 0 !important; }
 
 [self~="size-x5"] {
-  -webkit-flex: 5 0 0 !important;
-      -ms-flex: 5 0 0 !important;
-          flex: 5 0 0 !important; }
+  -ms-flex: 5 0 0 !important;
+      flex: 5 0 0 !important; }
 
 [self~="size-x6"] {
-  -webkit-flex: 6 0 0 !important;
-      -ms-flex: 6 0 0 !important;
-          flex: 6 0 0 !important; }
+  -ms-flex: 6 0 0 !important;
+      flex: 6 0 0 !important; }
 
 [self~="size-x7"] {
-  -webkit-flex: 7 0 0 !important;
-      -ms-flex: 7 0 0 !important;
-          flex: 7 0 0 !important; }
+  -ms-flex: 7 0 0 !important;
+      flex: 7 0 0 !important; }
 
 [self~="size-x8"] {
-  -webkit-flex: 8 0 0 !important;
-      -ms-flex: 8 0 0 !important;
-          flex: 8 0 0 !important; }
+  -ms-flex: 8 0 0 !important;
+      flex: 8 0 0 !important; }
 
 [self~="size-x9"] {
-  -webkit-flex: 9 0 0 !important;
-      -ms-flex: 9 0 0 !important;
-          flex: 9 0 0 !important; }
+  -ms-flex: 9 0 0 !important;
+      flex: 9 0 0 !important; }
 
 [self*="size-auto"] {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
 
 [self*="size-x0"] {
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto; }
 
 /* Fixed max-width size */
 [self~="size-xxlarge"] {
@@ -363,77 +327,60 @@
   width: 100%; }
 
 [self*="size-x"]:not([self*="small"]):not([self*="large"]) {
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1; }
+  -ms-flex-negative: 1;
+      flex-shrink: 1; }
 
 [self~="order-first"] {
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1; }
+  -ms-flex-order: -1;
+      order: -1; }
 
 [self~="order-1"] {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
+  -ms-flex-order: 1;
+      order: 1; }
 
 [self~="order-2"] {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
+  -ms-flex-order: 2;
+      order: 2; }
 
 [self~="order-3"] {
-  -webkit-order: 3;
-      -ms-flex-order: 3;
-          order: 3; }
+  -ms-flex-order: 3;
+      order: 3; }
 
 [self~="order-last"] {
-  -webkit-order: 999;
-      -ms-flex-order: 999;
-          order: 999; }
+  -ms-flex-order: 999;
+      order: 999; }
 
 [layout*="column"]:not([layout*="row"]) > * {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto; }
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto; }
 
 /* Optional additional features — (un)comment to include/exclude */
 @media screen and (max-width: 64em) {
   [layout*="lg-row"] {
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
   [layout*="lg-column"] {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+    -ms-flex-direction: column;
+        flex-direction: column; } }
 
 @media screen and (max-width: 52em) {
   [layout*="md-row"] {
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
   [layout*="md-column"] {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    -ms-flex-direction: column;
+        flex-direction: column; }
   [layout*="md-rows"],
   [layout*="md-columns"] {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 @media screen and (max-width: 40em) {
   [layout*="sm-row"] {
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
   [layout*="sm-column"] {
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
-
-/*# sourceMappingURL=maps/flex-layout-attribute.css.map */
+    -ms-flex-direction: column;
+        flex-direction: column; } }

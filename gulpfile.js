@@ -9,15 +9,14 @@ var gulp        = require( 'gulp' ),
     header      = require( 'gulp-header' ),
     pkg         = require( './package.json' );
 
-
-var paths = {
+var dir = {
         css : {
                 src  : 'sass',
                 dist : 'css'
         }
-}
+};
 
-var banner = ['/**',
+var banner = ['/*!',
         ' * Flex layout attribute',
         ' * <%= pkg.description %>',
         ' * ',
@@ -26,33 +25,29 @@ var banner = ['/**',
         ' * URL:     <%= pkg.homepage %>',
         ' * AUTHOR:  <%= pkg.author.name %> | <%= pkg.author.email %> | <%= pkg.author.web %>',
         ' * LICENSE: <%= pkg.license %>',
-        ''].join('\n');
+        ' */',
+        '\n'
+        ].join('\n');
 
-
-gulp.task( 'compile-css', function() {
-        return gulp.src( paths.css.src + '/*.scss' )
+gulp.task( 'css-compile', function() {
+        return gulp.src( dir.css.src + '/' + pkg.name + '.scss' )
             .pipe( sourcemaps.init() )
-            .pipe( sass() )
-            .pipe( prefix( {
-                    browsers : ['last 2 version']
-            } ) )
-            .pipe(header( banner, { pkg : pkg } ) )
-            .pipe( size( {pretty : true, showFiles : true} ) )
-            .pipe( sourcemaps.write( './maps/' ) )
-            .pipe( gulp.dest( paths.css.dist ) );
-} );
 
-gulp.task( 'minify-css', function() {
-        return gulp.src( paths.css.dist + '/flex-layout-attribute.css' )
-            .pipe( cssnano() )
+            .pipe( sass().on('error', sass.logError) )
+            .pipe( prefix( {browsers : ['last 2 version']}) )
             .pipe( header( banner, { pkg : pkg } ) )
+            .pipe( size( {pretty : true, showFiles : true} ) )
+            .pipe( gulp.dest( dir.css.dist ) )
+
+            .pipe( cssnano() )
             .pipe( rename( {suffix : '.min'} ) )
             .pipe( size( {pretty : true, showFiles : true} ) )
-            .pipe( gulp.dest( paths.css.dist ) );
+            .pipe( sourcemaps.write( './maps/' ) )
+            .pipe( gulp.dest( dir.css.dist ) );
 } );
 
 gulp.task( 'watch', function() {
-        gulp.watch( paths.css.src + '/**/*.scss', ['compile-css', 'minify-css'] );
+        gulp.watch( dir.css.src + '/**/*.scss', ['css-compile'] );
 } );
 
-gulp.task( 'default', ['compile-css', 'minify-css', 'watch'] );
+gulp.task( 'default', ['css-compile'] );

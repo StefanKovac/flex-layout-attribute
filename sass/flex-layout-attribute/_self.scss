@@ -4,7 +4,6 @@
 ==========================================================
 */
 
-
 //[#{$SELF}*="left"],
 [#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) [#{$SELF}*="left"],
 [#{$LAYOUT}*="row"]:not([#{$LAYOUT}*="column"]) [#{$SELF}*="top"] {
