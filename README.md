@@ -11,8 +11,8 @@ Items distributed in a row and centered within container:
 </div>
 ```
 
-#### Try live — [interactive demo](http://progressivered.com/fla/#playground)
-[![View demo](http://progressivered.com/assets/img/fla.jpg)](http://progressivered.com/fla/)
+#### Try live — [interactive demo](http://progressivered.com/fla/?d=0&v=1&h=1&s=0&i=000&a=000#playground)
+[![View demo](http://progressivered.com/assets/img/fla.jpg)](http://progressivered.com/fla/?d=0&v=1&h=1&s=0&i=000&a=000#playground)
 
 ### Benefits
 - **Dedicated HTML attribute** — separated layout markup, verbose & minimal syntax.
