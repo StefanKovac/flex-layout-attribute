@@ -11,7 +11,7 @@ Items distributed in a row and centered within container:
 </div>
 ```
 
-#### Try live — [interactive demo](http://progressivered.com/fla/)
+#### Try live — [interactive demo](http://progressivered.com/fla/#playground)
 [![View demo](http://progressivered.com/assets/img/fla.jpg)](http://progressivered.com/fla/)
 
 ### Benefits
