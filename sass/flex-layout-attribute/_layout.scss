@@ -15,11 +15,11 @@
     max-width: 100%;
 }
 
-[#{$LAYOUT}~="row"] {
+[#{$LAYOUT}^="row"] {
     flex-direction: row;
 }
 
-[#{$LAYOUT}~="column"] {
+[#{$LAYOUT}^="column"] {
     flex-direction: column;
 }
 

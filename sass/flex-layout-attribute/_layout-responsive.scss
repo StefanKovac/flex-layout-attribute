@@ -1,4 +1,4 @@
-// Adjust media-queries to your needs
+// Adjust media-queries to match your needs
 
 @media screen and ( max-width: 64em ){
     [#{$LAYOUT}*="lg-row"] {
@@ -7,6 +7,11 @@
 
     [#{$LAYOUT}*="lg-column"] {
         flex-direction: column;
+    }
+
+    [#{$LAYOUT}*="lg-rows"],
+    [#{$LAYOUT}*="lg-columns"] {
+        flex-wrap: wrap;
     }
 }
 
@@ -36,5 +41,10 @@
 
     [#{$LAYOUT}*="sm-column"] {
         flex-direction: column;
+    }
+
+    [#{$LAYOUT}*="sm-rows"],
+    [#{$LAYOUT}*="sm-columns"] {
+        flex-wrap: wrap;
     }
 }
