@@ -34,4 +34,4 @@ Items distributed in row and centered within container:
 * [Snippets](http://progressivered.com/fla/#snippets)
 
 #### License
-Code released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
+Released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
