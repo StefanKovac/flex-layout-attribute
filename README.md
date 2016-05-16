@@ -24,7 +24,7 @@ Items distributed in row and centered within container:
 * * *
 
 
-##### Quick start
+#### Quick start
 1) [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/archive/v1.0.0.zip)
 
 2) Insert flex-layout-attribute.css in document HEAD:
@@ -38,7 +38,7 @@ Items distributed in row and centered within container:
 </div>
 ```
 
-##### Learn more
+#### Learn more
 View interactive demo, documentation and snippets on project page: http://progressivered.com/fla/ 
 
 
