@@ -21,7 +21,10 @@ Items distributed in row and centered within container:
 - **Solid base** — ease to extend and customize.
 
 
-#### Quick start
+* * *
+
+
+## Quick start
 1) [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/archive/v1.0.0.zip)
 
 2) Insert flex-layout-attribute.css in document HEAD:
@@ -35,7 +38,7 @@ Items distributed in row and centered within container:
 </div>
 ```
 
-#### Learn more:
+## Learn more:
 * [Documentation](http://progressivered.com/fla/#documentation)
 * [Snippets](http://progressivered.com/fla/#snippets)
 
