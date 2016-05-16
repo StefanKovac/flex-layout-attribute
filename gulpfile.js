@@ -16,7 +16,7 @@ var dir = {
         }
 };
 
-var banner = ['/*!',
+var banner = ['/**',
         ' * Flex layout attribute',
         ' * <%= pkg.description %>',
         ' * ',
@@ -24,30 +24,35 @@ var banner = ['/*!',
         ' * DATE:    ' + util.date( 'yyyy-mm-dd' ),
         ' * URL:     <%= pkg.homepage %>',
         ' * AUTHOR:  <%= pkg.author.name %> | <%= pkg.author.email %> | <%= pkg.author.web %>',
-        ' * LICENSE: <%= pkg.license %>',
+        ' * LICENSE: <%= pkg.license %> ',
         ' */',
-        '\n'
-        ].join('\n');
+        ' ',
+        ''].join('\n');
+
 
 gulp.task( 'css-compile', function() {
         return gulp.src( dir.css.src + '/' + pkg.name + '.scss' )
             .pipe( sourcemaps.init() )
-
-            .pipe( sass().on('error', sass.logError) )
+            .pipe( sass() )
             .pipe( prefix( {browsers : ['last 2 version']}) )
             .pipe( header( banner, { pkg : pkg } ) )
             .pipe( size( {pretty : true, showFiles : true} ) )
             .pipe( gulp.dest( dir.css.dist ) )
-
-            .pipe( cssnano() )
-            .pipe( rename( {suffix : '.min'} ) )
-            .pipe( size( {pretty : true, showFiles : true} ) )
             .pipe( sourcemaps.write( './maps/' ) )
             .pipe( gulp.dest( dir.css.dist ) );
 } );
 
-gulp.task( 'watch', function() {
-        gulp.watch( dir.css.src + '/**/*.scss', ['css-compile'] );
+gulp.task( 'css-minify', ['css-compile'], function() {
+        return gulp.src( dir.css.dist + '/' + pkg.filename )
+            .pipe( cssnano() )
+            .pipe( header( banner, { pkg : pkg } ) )
+            .pipe( rename( {suffix : '.min'} ) )
+            .pipe( size( {pretty : true, showFiles : true} ) )
+            .pipe( gulp.dest( dir.css.dist ) );
 } );
 
-gulp.task( 'default', ['css-compile'] );
+gulp.task( 'watch', function() {
+        gulp.watch( dir.css.src + '/**/*.scss', ['css-minify'] );
+} );
+
+gulp.task( 'default', ['css-minify'] );

@@ -1,14 +1,14 @@
-/*!
+/**
  * Flex layout attribute
  * HTML layout helper based on CSS flexbox specification. See http://progressivered.com/fla/ for details.
  * 
- * VERSION: v1.0.0-beta
+ * VERSION: v1.0.0-beta.1
  * DATE:    2016-05-16
  * URL:     http://progressivered.com/fla/
  * AUTHOR:  Stefan Kovac | stef@progressivered.com | http://progressivered.com/
- * LICENSE: MIT
+ * LICENSE: MIT 
  */
-
+ 
 @charset "UTF-8";
 /*
 ==========================================================
@@ -385,3 +385,5 @@
   [layout*="sm-column"] {
     -ms-flex-direction: column;
         flex-direction: column; } }
+
+/*# sourceMappingURL=maps/flex-layout-attribute.css.map */
