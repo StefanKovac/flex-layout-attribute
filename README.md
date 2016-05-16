@@ -39,7 +39,7 @@ Items distributed in row and centered within container:
 ```
 
 ## Learn more
-Interactive demo, documentation and snippets on project page: http://progressivered/fla/ 
+Interactive demo, documentation and snippets on project page: http://progressivered.com/fla/ 
 
 
 * * *
