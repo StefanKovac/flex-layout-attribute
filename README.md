@@ -39,5 +39,5 @@ View interactive demo, documentation and snippets on project page: http://progre
 
 
 * * *
-##### License
+###### License
 FLA is released under [the MIT license](https://github.com/StefanKovac/flex-layout-attribute/blob/master/LICENSE).
