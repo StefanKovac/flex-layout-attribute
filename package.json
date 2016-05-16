@@ -1,7 +1,7 @@
 {
         "name" : "flex-layout-attribute",
         "filename": "flex-layout-attribute.css",
-        "description" : "HTML layout helper based on CSS flexbox specification. See http://progressivered.com/fla/ for details.",
+        "description" : "Hrml layout helper based on CSS flexbox specification. See http://progressivered.com/fla/ for details.",
         "version" : "0.1.0",
         "author": {
                 "name": "Stefan Kovac",
@@ -12,7 +12,7 @@
         "homepage" : "http://progressivered.com/fla/",
         "repository" : {
                 "type" : "git",
-                "url" : "https://github.com/StefanKovac/flex-layout-attribute.git"
+                "url" : "https://github.com/"
         },
         "keywords" : [
                 "flexbox",
