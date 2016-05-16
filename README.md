@@ -8,6 +8,16 @@ Layout helper based on CSS flexbox specification designed to serve you as quick 
 </div>
 ```
 
+#### Quick start
+1) [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/archive/v1.0.0.zip)
+
+2) Insert flex-layout-attribute.css in document HEAD:
+```html
+<link href="path/to/css/fla.min.css" rel="stylesheet">
+```
+
+3) Add layout attribute to html elements:
+
 #### Interactive demo
 [![View demo](http://progressivered.com/assets/img/fla.jpg)](http://progressivered.com/fla/)
 
