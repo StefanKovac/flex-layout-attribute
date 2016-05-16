@@ -1,0 +1,40 @@
+// Adjust media-queries to your needs
+
+@media screen and ( max-width: 64em ){
+    [#{$LAYOUT}*="lg-row"] {
+        flex-direction: row;
+    }
+
+    [#{$LAYOUT}*="lg-column"] {
+        flex-direction: column;
+    }
+}
+
+
+
+@media screen and ( max-width: 52em ){
+    [#{$LAYOUT}*="md-row"] {
+        flex-direction: row;
+    }
+
+    [#{$LAYOUT}*="md-column"] {
+        flex-direction: column;
+    }
+
+    [#{$LAYOUT}*="md-rows"],
+    [#{$LAYOUT}*="md-columns"] {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@media screen and ( max-width: 40em ){
+    [#{$LAYOUT}*="sm-row"] {
+        flex-direction: row;
+    }
+
+    [#{$LAYOUT}*="sm-column"] {
+        flex-direction: column;
+    }
+}

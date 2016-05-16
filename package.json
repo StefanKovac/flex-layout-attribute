@@ -1,0 +1,38 @@
+{
+        "name" : "flex-layout-attribute",
+        "filename": "flex-layout-attribute.css",
+        "description" : "HTML layout helper based on CSS flexbox specification. See http://progressivered.com/fla/ for details.",
+        "version" : "0.1.0",
+        "author": {
+                "name": "Stefan Kovac",
+                "email": "stef@progressivered.com",
+                "web": "http://progressivered.com/"
+        },
+        "license" : "MIT",
+        "homepage" : "http://progressivered.com/fla/",
+        "repository" : {
+                "type" : "git",
+                "url" : "https://github.com/"
+        },
+        "keywords" : [
+                "flexbox",
+                "layout",
+                "attribute",
+                "css",
+                "fla"
+        ],
+        "dependencies" : {},
+        "devDependencies" : {
+                "gulp" : "^3.9.0",
+                "gulp-autoprefixer" : "^3.1.0",
+                "gulp-cached" : "^1.1.0",
+                "gulp-cssnano" : "^2.1.1",
+                "gulp-header" : "^1.8.2",
+                "gulp-notify" : "^2.2.0",
+                "gulp-rename" : "^1.2.2",
+                "gulp-sass" : "^2.1.1",
+                "gulp-sass-lint" : "^1.1.1",
+                "gulp-size" : "^2.0.0",
+                "gulp-sourcemaps" : "^1.6.0"
+        }
+}

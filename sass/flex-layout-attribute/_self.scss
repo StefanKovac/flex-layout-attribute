@@ -1,0 +1,127 @@
+/*
+==========================================================
+                    SELF ALIGNMENT
+==========================================================
+*/
+
+
+//[#{$SELF}*="left"],
+[#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) [#{$SELF}*="left"],
+[#{$LAYOUT}*="row"]:not([#{$LAYOUT}*="column"]) [#{$SELF}*="top"] {
+//[#{$LAYOUT}*="row"] [#{$SELF}*="top"] {
+    align-self: flex-start;
+}
+
+[#{$SELF}~="center"]{
+    align-self: center;
+}
+
+//[#{$SELF}*="right"],
+//[#{$LAYOUT}=""] [#{$SELF}*="right"],
+[#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) [#{$SELF}*="right"],
+[#{$LAYOUT}*="row"]:not([#{$LAYOUT}*="column"]) [#{$SELF}*="bottom"] {
+    align-self: flex-end;
+}
+
+[#{$SELF}*="stretch"] {
+    align-self: stretch;
+}
+
+
+/* ALIGN VIA MARGINS
+========================================================== */
+
+/* Container: */
+[#{$LAYOUT}][#{$SELF}*="center"] {
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+[#{$LAYOUT}][#{$SELF}*="right"]{
+    margin-right: 0;
+}
+
+[#{$LAYOUT}][#{$SELF}*="left"]{
+    margin-left: 0;
+}
+
+
+/* Items: */
+[#{$LAYOUT}*="column"] [#{$SELF}*="bottom"] { margin-top: auto; }
+[#{$LAYOUT}*="column"] [#{$SELF}*="top"]    { margin-bottom: auto; }
+
+[#{$LAYOUT}*="row"] [#{$SELF}*="left"]      { margin-right: auto; }
+[#{$LAYOUT}*="row"] [#{$SELF}*="right"]     { margin-left: auto; }
+
+
+
+
+
+
+/*
+==========================================================
+                      SELF SIZE
+==========================================================
+*/
+
+/* Relative size */
+[#{$SELF}~="size-1of5"] { width: 20%;  }
+[#{$SELF}~="size-1of4"] { width: 25%;  }
+[#{$SELF}~="size-1of3"] { width: 33.33333%;  }
+[#{$SELF}~="size-2of5"] { width: 40% ; }
+[#{$SELF}~="size-1of2"] { width: 50%; }
+[#{$SELF}~="size-3of5"] { width: 60%; }
+[#{$SELF}~="size-2of3"] { width: 66.6666%; }
+[#{$SELF}~="size-3of4"] { width: 75%; }
+[#{$SELF}~="size-4of5"] { width: 80%; }
+[#{$SELF}~="size-1of1"] { width: 100% ; }
+
+
+
+/* Proportional size*/
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="-stretch"] > *:not([#{$SELF}*="size-"]),    // <-- hack!! making children equal width in rows
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="stretch-"] > *:not([#{$SELF}*="size-"]), // <-- hack!! making children equal height in rows
+[#{$SELF}~="size-x1"] { flex : 1 0 0 !important; }
+[#{$SELF}~="size-x2"] { flex : 2 0 0 !important; }
+[#{$SELF}~="size-x3"] { flex : 3 0 0 !important; }
+[#{$SELF}~="size-x4"] { flex : 4 0 0 !important; }
+[#{$SELF}~="size-x5"] { flex : 5 0 0 !important; }
+[#{$SELF}~="size-x6"] { flex : 6 0 0 !important; }
+[#{$SELF}~="size-x7"] { flex : 7 0 0 !important; }
+[#{$SELF}~="size-x8"] { flex : 8 0 0 !important; }
+[#{$SELF}~="size-x9"] { flex : 9 0 0 !important; }
+
+[#{$SELF}*="size-auto"] { flex: 1 1 auto; }
+[#{$SELF}*="size-x0"]   { flex: 0 0 auto; }
+
+
+/* Fixed max-width size */
+[#{$SELF}~="size-xxlarge"] { max-width: 1440px ; width:100% }
+[#{$SELF}~="size-xlarge"]  { max-width: 1200px ; width:100% }
+[#{$SELF}~="size-large"]   { max-width: 960px ;  width:100%  }
+[#{$SELF}~="size-larger"]  { max-width: 840px ;  width:100% }
+[#{$SELF}~="size-medium"]  { max-width: 720px ;  width:100% }
+[#{$SELF}~="size-smaller"] { max-width: 600px ;  width:100% }
+[#{$SELF}~="size-small"]   { max-width: 480px ;  width:100% }
+[#{$SELF}~="size-xsmall"]  { max-width: 360px ;  width:100% }
+[#{$SELF}~="size-xxsmall"] { max-width: 240px ;  width:100% }
+
+
+// BUG FIX: https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored
+[#{$SELF}*="size-x"]:not([#{$SELF}*="small"]):not([#{$SELF}*="large"]) {
+    flex-shrink: 1;
+}
+
+
+// ITEMS ORDER
+[#{$SELF}~="order-first"]{ order: -1;}
+[#{$SELF}~="order-1"]    { order: 1;}
+[#{$SELF}~="order-2"]    { order: 2;}
+[#{$SELF}~="order-3"]    { order: 3;}
+[#{$SELF}~="order-last"] { order: 999;}
+
+
+[#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) > * {
+    flex-shrink: 0;
+    flex-basis: auto; // <-- Force elements natural height
+}
