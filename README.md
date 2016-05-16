@@ -14,13 +14,13 @@ Items distributed in row and centered within container:
 #### Try live — [interactive demo](http://progressivered.com/fla/)
 [![View demo](http://progressivered.com/assets/img/fla.jpg)](http://progressivered.com/fla/)
 
-#### Benefits
+### Benefits
 - **Dedicated HTML attribute** — separated layout markup, verbose & minimal syntax.
 - **Beyond grids** — ratio relationships, element sizes based on a scale.
 - **Rapid prototyping** — design in browser, quick iterations, no need to write CSS for layout.
 - **Solid base** — ease to extend and customize.
 
-#### Quick start
+### Quick start
 1) [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/archive/v1.0.0.zip)
 
 2) Insert flex-layout-attribute.css in document HEAD:
