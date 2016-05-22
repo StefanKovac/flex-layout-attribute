@@ -12,10 +12,10 @@ Items distributed in a row and centered within container:
 ```
 
 #### Try live — [interactive demo](http://progressivered.com/fla/?d=0&v=1&h=1&s=0&i=000&a=000#playground)
-[![View demo](http://progressivered.com/assets/img/fla-github.png)](http://progressivered.com/fla/?d=0&v=1&h=1&s=0&i=000&a=000#playground)
+[![View demo](http://progressivered.com/assets/img/fla/fla-github.png)](http://progressivered.com/fla/?d=0&v=1&h=1&s=0&i=000&a=000#playground)
 
 ### Benefits
-- **Dedicated HTML attribute** — separated layout markup, verbose & minimal syntax.
+- **Dedicated HTML attribute** — separated layout markup, semantic & concise syntax.
 - **Beyond grids** — ratio relationships, element sizes based on a scale.
 - **Rapid prototyping** — design in browser, quick iterations, no need to write CSS for layout.
 - **Solid base** — ease to extend and customize.
@@ -35,7 +35,7 @@ Items distributed in a row and centered within container:
 ```
 
 ### Learn more
-View interactive demo, documentation and snippets on project page: http://progressivered.com/fla/ 
+Interactive demo, documentation and snippets — http://progressivered.com/fla/
 
 
 * * *

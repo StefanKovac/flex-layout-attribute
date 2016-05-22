@@ -1,15 +1,21 @@
 /**
  * Flex layout attribute
- * HTML layout helper based on CSS flexbox specification. See http://progressivered.com/fla/ for details.
+ * HTML layout helper based on CSS flexbox specification.
  * 
- * VERSION: v1.0.0-beta.1
- * DATE:    2016-05-16
+ * VERSION: v1.0.0-beta.2
+ * DATE:    2016-05-22
  * URL:     http://progressivered.com/fla/
  * AUTHOR:  Stefan Kovac | stef@progressivered.com | http://progressivered.com/
  * LICENSE: MIT 
  */
  
 @charset "UTF-8";
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 /*
 ==========================================================
                   GENERAL DEFINITIONS
@@ -152,7 +158,7 @@
 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   [layout*="column"]:not([layout*="row"]) > * {
-    max-width: 100%; }
+    max-width: auto; }
   [layout*="column"][self*="top"] {
     height: auto !important; }
   [self~="size-"] > * {
@@ -247,40 +253,40 @@
 [layout*="row"][layout*="-stretch"] > *:not([self*="size-"]),
 [layout*="column"][layout*="stretch-"] > *:not([self*="size-"]),
 [self~="size-x1"] {
-  -ms-flex: 1 0 0 !important;
-      flex: 1 0 0 !important; }
+  -ms-flex: 1 0 0% !important;
+      flex: 1 0 0% !important; }
 
 [self~="size-x2"] {
-  -ms-flex: 2 0 0 !important;
-      flex: 2 0 0 !important; }
+  -ms-flex: 2 0 0% !important;
+      flex: 2 0 0% !important; }
 
 [self~="size-x3"] {
-  -ms-flex: 3 0 0 !important;
-      flex: 3 0 0 !important; }
+  -ms-flex: 3 0 0% !important;
+      flex: 3 0 0% !important; }
 
 [self~="size-x4"] {
-  -ms-flex: 4 0 0 !important;
-      flex: 4 0 0 !important; }
+  -ms-flex: 4 0 0% !important;
+      flex: 4 0 0% !important; }
 
 [self~="size-x5"] {
-  -ms-flex: 5 0 0 !important;
-      flex: 5 0 0 !important; }
+  -ms-flex: 5 0 0% !important;
+      flex: 5 0 0% !important; }
 
 [self~="size-x6"] {
-  -ms-flex: 6 0 0 !important;
-      flex: 6 0 0 !important; }
+  -ms-flex: 6 0 0% !important;
+      flex: 6 0 0% !important; }
 
 [self~="size-x7"] {
-  -ms-flex: 7 0 0 !important;
-      flex: 7 0 0 !important; }
+  -ms-flex: 7 0 0% !important;
+      flex: 7 0 0% !important; }
 
 [self~="size-x8"] {
-  -ms-flex: 8 0 0 !important;
-      flex: 8 0 0 !important; }
+  -ms-flex: 8 0 0% !important;
+      flex: 8 0 0% !important; }
 
 [self~="size-x9"] {
-  -ms-flex: 9 0 0 !important;
-      flex: 9 0 0 !important; }
+  -ms-flex: 9 0 0% !important;
+      flex: 9 0 0% !important; }
 
 [self*="size-auto"] {
   -ms-flex: 1 1 auto;
@@ -331,7 +337,7 @@
   -ms-flex-negative: 1;
       flex-shrink: 1; }
 
-[self~="order-first"] {
+[self~="first"] {
   -ms-flex-order: -1;
       order: -1; }
 
@@ -347,7 +353,7 @@
   -ms-flex-order: 3;
       order: 3; }
 
-[self~="order-last"] {
+[self~="last"] {
   -ms-flex-order: 999;
       order: 999; }
 
@@ -393,5 +399,71 @@
   [layout*="sm-columns"] {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
+
+@media screen and (max-width: 64em) {
+  [self*="lg-full"] {
+    -ms-flex: 1 1 100% !important;
+        flex: 1 1 100% !important;
+    width: 100%;
+    max-width: 100%; }
+  [self*="lg-half"] {
+    -ms-flex: 1 1 50% !important;
+        flex: 1 1 50% !important;
+    width: 50%;
+    max-width: 50%; }
+  [self~="lg-first"] {
+    -ms-flex-order: -1;
+        order: -1; }
+  [self~="lg-last"] {
+    -ms-flex-order: 999;
+        order: 999; }
+  [self~="lg-hide"] {
+    display: none; }
+  [self~="lg-show"] {
+    display: inherit; } }
+
+@media screen and (max-width: 52em) {
+  [self*="md-full"] {
+    -ms-flex: 1 1 100% !important;
+        flex: 1 1 100% !important;
+    width: 100%;
+    max-width: 100%; }
+  [self*="md-half"] {
+    -ms-flex: 1 1 50% !important;
+        flex: 1 1 50% !important;
+    width: 50%;
+    max-width: 50%; }
+  [self~="md-first"] {
+    -ms-flex-order: -1;
+        order: -1; }
+  [self~="md-last"] {
+    -ms-flex-order: 999;
+        order: 999; }
+  [self~="md-hide"] {
+    display: none; }
+  [self~="md-show"] {
+    display: inherit; } }
+
+@media screen and (max-width: 40em) {
+  [self*="sm-full"] {
+    -ms-flex: 1 1 100% !important;
+        flex: 1 1 100% !important;
+    width: 100%;
+    max-width: 100%; }
+  [self*="sm-half"] {
+    -ms-flex: 1 1 50% !important;
+        flex: 1 1 50% !important;
+    width: 50%;
+    max-width: 50%; }
+  [self~="sm-first"] {
+    -ms-flex-order: -1;
+        order: -1; }
+  [self~="sm-last"] {
+    -ms-flex-order: 999;
+        order: 999; }
+  [self~="sm-hide"] {
+    display: none; }
+  [self~="sm-show"] {
+    display: inherit; } }
 
 /*# sourceMappingURL=maps/flex-layout-attribute.css.map */

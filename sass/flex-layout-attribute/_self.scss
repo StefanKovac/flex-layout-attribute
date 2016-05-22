@@ -80,15 +80,15 @@
 /* Proportional size*/
 [#{$LAYOUT}*="row"][#{$LAYOUT}*="-stretch"] > *:not([#{$SELF}*="size-"]),    // <-- hack!! making children equal width in rows
 [#{$LAYOUT}*="column"][#{$LAYOUT}*="stretch-"] > *:not([#{$SELF}*="size-"]), // <-- hack!! making children equal height in rows
-[#{$SELF}~="size-x1"] { flex : 1 0 0 !important; }
-[#{$SELF}~="size-x2"] { flex : 2 0 0 !important; }
-[#{$SELF}~="size-x3"] { flex : 3 0 0 !important; }
-[#{$SELF}~="size-x4"] { flex : 4 0 0 !important; }
-[#{$SELF}~="size-x5"] { flex : 5 0 0 !important; }
-[#{$SELF}~="size-x6"] { flex : 6 0 0 !important; }
-[#{$SELF}~="size-x7"] { flex : 7 0 0 !important; }
-[#{$SELF}~="size-x8"] { flex : 8 0 0 !important; }
-[#{$SELF}~="size-x9"] { flex : 9 0 0 !important; }
+[#{$SELF}~="size-x1"] { flex : 1 0 0% !important; }
+[#{$SELF}~="size-x2"] { flex : 2 0 0% !important; }
+[#{$SELF}~="size-x3"] { flex : 3 0 0% !important; }
+[#{$SELF}~="size-x4"] { flex : 4 0 0% !important; }
+[#{$SELF}~="size-x5"] { flex : 5 0 0% !important; }
+[#{$SELF}~="size-x6"] { flex : 6 0 0% !important; }
+[#{$SELF}~="size-x7"] { flex : 7 0 0% !important; }
+[#{$SELF}~="size-x8"] { flex : 8 0 0% !important; }
+[#{$SELF}~="size-x9"] { flex : 9 0 0% !important; }
 
 [#{$SELF}*="size-auto"] { flex: 1 1 auto; }
 [#{$SELF}*="size-x0"]   { flex: 0 0 auto; }
@@ -113,11 +113,11 @@
 
 
 // ITEMS ORDER
-[#{$SELF}~="order-first"]{ order: -1;}
-[#{$SELF}~="order-1"]    { order: 1;}
-[#{$SELF}~="order-2"]    { order: 2;}
-[#{$SELF}~="order-3"]    { order: 3;}
-[#{$SELF}~="order-last"] { order: 999;}
+[#{$SELF}~="first"]     { order: -1;}
+[#{$SELF}~="order-1"]   { order: 1;}
+[#{$SELF}~="order-2"]   { order: 2;}
+[#{$SELF}~="order-3"]   { order: 3;}
+[#{$SELF}~="last"]      { order: 999;}
 
 
 [#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) > * {

@@ -150,7 +150,7 @@
 
     // Prevents horizontal overflow of content
     [#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) > * {
-        max-width: 100%;
+        max-width: auto;
     }
 
     // hack to prevent text overflow on long text articles in IE
