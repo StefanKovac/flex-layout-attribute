@@ -21,9 +21,9 @@ Items distributed in a row and centered within container:
 - **Solid base** — ease to extend and customize.
 
 ### Quick start
-1) [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/archive/v1.0.0.zip)
+1) [Download latest release](https://github.com/StefanKovac/flex-layout-attribute/releases)
 
-2) Insert flex-layout-attribute.css in document HEAD:
+2) Insert flex-layout-attribute.min.css in document HEAD:
 ```html
 <link href="path/to/css/flex-layout-attribute.min.css" rel="stylesheet">
 ```
