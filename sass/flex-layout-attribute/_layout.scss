@@ -1,0 +1,170 @@
+
+/*
+==========================================================
+                  GENERAL DEFINITIONS
+==========================================================
+*/
+
+[#{$LAYOUT}] {
+    display: flex;
+}
+
+[#{$LAYOUT}*="row"],
+[#{$LAYOUT}*="column"] {
+    width: 100%;
+    max-width: 100%;
+}
+
+[#{$LAYOUT}^="row"] {
+    flex-direction: row;
+}
+
+[#{$LAYOUT}^="column"] {
+    flex-direction: column;
+}
+
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="reverse"] {
+    flex-direction: row-reverse;
+}
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="reverse"] {
+    flex-direction: column-reverse;
+}
+
+[#{$LAYOUT}*="rows"],
+[#{$LAYOUT}*="columns"] {
+    flex-wrap: wrap;
+}
+
+[#{$LAYOUT}="none"] {
+    flex: none;
+}
+
+
+
+
+
+/*
+==========================================================
+                  MAIN AXIS ALIGNMENT
+==========================================================
+*/
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="top-"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="-left"] {
+    justify-content: flex-start;
+}
+
+//[#{$LAYOUT}=""],
+[#{$LAYOUT}~="centered"],
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="center-"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="-center"]{
+    justify-content: center;
+}
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="bottom-"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="-right"] {
+    justify-content: flex-end;
+}
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="spread-"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="-spread"]{
+    justify-content: space-around;
+}
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="justify-"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="-justify"]{
+    justify-content: space-between;
+}
+
+
+
+/*
+==========================================================
+                CROSS AXIS ALIGNMENT
+==========================================================
+*/
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="-left"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="top-"] {
+    align-items: flex-start;
+}
+
+[#{$LAYOUT}~="centered"],
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="-center"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="center-"] {
+    align-items: center;
+}
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="-right"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="bottom-"] {
+    align-items: flex-end;
+}
+
+[#{$LAYOUT}*="column"][#{$LAYOUT}*="-stretch"],
+[#{$LAYOUT}*="row"][#{$LAYOUT}*="stretch-"]{
+    align-items: stretch;
+}
+
+
+
+
+/*
+==========================================================
+               MULTI-LINE ALIGNMENT
+==========================================================
+*/
+
+[#{$LAYOUT}*="rows"][#{$LAYOUT}*="top-"],
+[#{$LAYOUT}*="columns"][#{$LAYOUT}*="-left"] { align-content: flex-start }
+
+
+[#{$LAYOUT}*="rows"][#{$LAYOUT}*="bottom-"],
+[#{$LAYOUT}*="columns"][#{$LAYOUT}*="-right"]{ align-content: flex-end }
+
+
+[#{$LAYOUT}*="rows"][#{$LAYOUT}*="center-"],
+[#{$LAYOUT}*="columns"][#{$LAYOUT}*="-center"] { align-content: center}
+
+
+[#{$LAYOUT}*="rows"][#{$LAYOUT}*="justify-"],
+[#{$LAYOUT}*="columns"][#{$LAYOUT}*="-justify"] { align-content: space-between}
+
+
+[#{$LAYOUT}*="rows"][#{$LAYOUT}*="spread-"],
+[#{$LAYOUT}*="columns"][#{$LAYOUT}*="-spread"] { align-content: space-around }
+
+
+[#{$LAYOUT}*="rows"][#{$LAYOUT}*="stretch-"],
+[#{$LAYOUT}*="columns"][#{$LAYOUT}*="-stretch"]{ align-content: stretch }
+
+
+
+/*
+==========================================================
+                       IE10+ HACKS
+==========================================================
+*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    // Prevents horizontal overflow of content
+    [#{$LAYOUT}*="column"]:not([#{$LAYOUT}*="row"]) > * {
+        max-width: auto;
+    }
+
+    // hack to prevent text overflow on long text articles in IE
+    [#{$LAYOUT}*="column"][#{$SELF}*="top"] {
+        height: auto !important;
+    }
+
+    // for justified or spaced column items to prevent vertical overflow
+    [#{$SELF}~="size-"] > * {
+        height: auto;
+    }
+
+
+}
+
+
+

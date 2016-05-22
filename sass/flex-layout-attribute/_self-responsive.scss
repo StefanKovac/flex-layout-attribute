@@ -1,0 +1,68 @@
+// Adjust media-queries to match your needs and/or add more rules
+
+@media screen and ( max-width: 64em ){
+    [#{$SELF}*="lg-full"] {
+        flex: 1 1 100% !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    [#{$SELF}*="lg-half"] {
+        flex: 1 1 50% !important;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    [#{$SELF}~="lg-first"] { order: -1;}
+    [#{$SELF}~="lg-last"]  { order: 999;}
+
+    [#{$SELF}~="lg-hide"] { display: none;}
+    [#{$SELF}~="lg-show"] { display: inherit;}
+}
+
+
+
+
+@media screen and ( max-width: 52em ){
+    [#{$SELF}*="md-full"] {
+        flex: 1 1 100% !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    [#{$SELF}*="md-half"] {
+        flex: 1 1 50% !important;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    [#{$SELF}~="md-first"] { order: -1;}
+    [#{$SELF}~="md-last"]  { order: 999;}
+
+    [#{$SELF}~="md-hide"] { display: none;}
+    [#{$SELF}~="md-show"] { display: inherit;}
+}
+
+
+
+@media screen and ( max-width: 40em ){
+    [#{$SELF}*="sm-full"] {
+        flex: 1 1 100% !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    [#{$SELF}*="sm-half"] {
+        flex: 1 1 50% !important;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    [#{$SELF}~="sm-first"] { order: -1;}
+    [#{$SELF}~="sm-last"]  { order: 999;}
+
+    [#{$SELF}~="sm-hide"] { display: none;}
+    [#{$SELF}~="sm-show"] { display: inherit;}
+}
+
+
