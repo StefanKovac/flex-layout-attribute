@@ -2,7 +2,8 @@
         "name" : "flex-layout-attribute",
         "filename": "flex-layout-attribute.css",
         "description" : "HTML layout helper based on CSS flexbox specification.",
-        "version" : "1.0.0",
+        "version" : "1.0.1",
+        "main": "css/flex-layout-attribute.min.css",
         "author": {
                 "name": "Stefan Kovac",
                 "email": "stef@progressivered.com",
@@ -14,6 +15,11 @@
                 "type" : "git",
                 "url" : "https://github.com/StefanKovac/flex-layout-attribute.git"
         },
+        "scripts": {
+                "build": "gulp",
+                "watch": "gulp watch",
+                "setup": "npm install"
+        },
         "keywords" : [
                 "flexbox",
                 "layout",
@@ -21,6 +27,9 @@
                 "css",
                 "fla"
         ],
+        "bugs": {
+                "url": "https://github.com/StefanKovac/flex-layout-attribute/issues"
+        },
         "dependencies" : {},
         "devDependencies" : {
                 "gulp" : "^3.9.0",
