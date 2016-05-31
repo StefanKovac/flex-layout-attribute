@@ -21,18 +21,29 @@ Items distributed in a row and centered within container:
 - **Solid base** — ease to extend and customize.
 
 ### Quick start
-1) [Download latest release](https://github.com/StefanKovac/flex-layout-attribute/releases)
+Several quick start options are available:
 
-2) Insert flex-layout-attribute.min.css in document HEAD:
+* [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/releases)
+* Clone the repo: `git clone https://github.com/StefanKovac/flex-layout-attribute.git`.
+* Install with npm: `npm install flex-layout-attribute`.
+
+### Usage
+1) Insert flex-layout-attribute.min.css in document HEAD:
 ```html
 <link href="path/to/css/flex-layout-attribute.min.css" rel="stylesheet">
 ```
-3) Add layout attribute to html elements:
+
+2) Add layout attribute to html elements:
 ```html
 <div layout="row center-justify">
     ...
 </div>
 ```
+
+### Development
+1. Clone the repo: `git clone https://github.com/StefanKovac/flex-layout-attribute.git`.
+2. Install dependencies: `npm run setup`.
+3. Build FLA: `gulp` or set watcher: `gulp watch`
 
 ### Learn more
 Interactive demo, documentation and snippets — http://progressivered.com/fla/
