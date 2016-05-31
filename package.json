@@ -16,9 +16,9 @@
                 "url" : "https://github.com/StefanKovac/flex-layout-attribute.git"
         },
         "scripts": {
+                "setup": "npm install",
                 "build": "gulp",
-                "watch": "gulp watch",
-                "setup": "npm install"
+                "watch": "gulp watch"
         },
         "keywords" : [
                 "flexbox",

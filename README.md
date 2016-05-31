@@ -21,7 +21,6 @@ Items distributed in a row and centered within container:
 - **Solid base** — ease to extend and customize.
 
 ### Quick start
-
 Several quick start options are available:
 
 * [Download the latest release](https://github.com/StefanKovac/flex-layout-attribute/releases)
