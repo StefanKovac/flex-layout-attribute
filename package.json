@@ -2,7 +2,7 @@
   "name": "flex-layout-attribute",
   "filename": "flex-layout-attribute.css",
   "description": "HTML layout helper based on CSS flexbox specification.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "css/flex-layout-attribute.min.css",
   "author": {
     "name": "Stefan Kovac",
